@@ -1,7 +1,9 @@
-# Making a revision
 # Dan Q. Nguyen
 # March 15, 2014
 # Test Area for ruby classes
+
+$global_variable = 0
+# note: unitialized variables are set to null
 
 class Animal
 	attr_accessor :name, :age, :trait
@@ -13,7 +15,8 @@ first_animal.trait = "annoying"
 puts "Animal name = " + first_animal.name + ", trait = " + first_animal.trait + "\n"
 
 class MyClass
-	@@classVariable = 0
+	CONSTAT1 = 100		#all uppercase, cannot change
+	@@classVariable = 0	#class variables must be initalized before method use
 	def initialize(id, name, addr)
 		@obj_id = id
 		@obj_name = name
@@ -21,6 +24,7 @@ class MyClass
 		@@classVariable += 1
 	end 
 	def getClassVar
+		# Use the '#' char before variables to include in string	
 		puts "Number of objects = #@@classVariable"
 	end
 	def methodFoo
