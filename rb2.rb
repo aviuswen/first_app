@@ -50,4 +50,17 @@ BEGIN {
 	puts "\tSTART rb2.rb"
 }
 
+arr = [ "blah", 10, 023, ?a, 0b101011, 4E20 ]
+puts "  Looping through array"
+arr.each do |i|
+	puts i
+end
+
+hsh = Hash.new
+hsh["foo"] = "bar"
+hsh[1] = "bubles"
+
+puts "hsh[\"foo\"] = #{hsh["foo"]}"
+puts "hsh[1] = #{hsh[1]}"
+
 
