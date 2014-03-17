@@ -63,4 +63,10 @@ hsh[1] = "bubles"
 puts "hsh[\"foo\"] = #{hsh["foo"]}"
 puts "hsh[1] = #{hsh[1]}"
 
+a, b, c = 10, 20, 30 #parallel assignment
+a, b = b, c #parallel assignment in a swap
 
+puts "#{defined? arr}" #ask if hsh is defined and tells what it is
+puts "#{defined? $global_variable}"
+puts defined? blbl
+puts defined? obj.methodFoo
