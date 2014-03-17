@@ -28,7 +28,7 @@ class MyClass
 		puts "Number of objects = #@@classVariable"
 	end
 	def methodFoo
-		puts "methodFoo Runs"
+		puts "methodFoo Runs with ID: #{@obj_id} and const = #{CONSTAT1}"
 	end 
 
 end #MyClass
@@ -40,7 +40,9 @@ obj1 = MyClass.new(nil, nil, nil)
 obj2 = MyClass.new(nil, nil, nil)
 obj.getClassVar
 
-
+puts "self is #{self}" #receiver object of the current method
+puts "__FILE__ is #{__FILE__}" #gives file name
+puts "__LINE__ is #{__LINE__}" #gives line number
 END {
 	puts "\tEND rb2.rb"
 }
